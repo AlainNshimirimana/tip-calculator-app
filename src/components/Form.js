@@ -1,13 +1,11 @@
 import React from "react";
-import DollarSign from "./images/icon-dollar.svg";
-import PersonIcon from "./images/icon-person.svg";
 
 const Form = ({bill, setBill, tip, setTip, people, setPeople}) => {
    return(
        <form className="form">
            <div className="form-input">
                <label>Bill</label><br/>
-               <img src={DollarSign}/>
+               <img src="./images/icon-dollar.svg" alt="dollar-sign"/>
                <input type="number" placeholder="0" value={bill} onChange={(e) => setBill(e.target.value)}/>
            </div>
 
@@ -16,8 +14,8 @@ const Form = ({bill, setBill, tip, setTip, people, setPeople}) => {
            </div>
 
            <div className="form-input">
-               <label>Bill</label><br/>
-               <img src={PersonIcon}/>
+               <label>Number of People</label><br/>
+               <img src="./images/icon-person.svg" alt="person-icon"/>
                <input type="number" placeholder="0" value={people} onChange={(e) => setPeople(e.target.value)}/>
            </div>
        </form>
