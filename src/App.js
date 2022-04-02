@@ -1,15 +1,16 @@
 import React, {useState} from "react";
 import Form from "./components/Form";
-import Output from "./components/OutputForm";
 import Title from "./components/images/logo.svg";
 import "./css/App.css";
+import "./css/Form.css";
 
 function App(){
     return <>
     <header><img src={Title}/></header>
         <div className="main-container">
+            <div className="form-container">
             <Form/>
-            <Output/>
+            </div>
         </div>
     </>
 }
