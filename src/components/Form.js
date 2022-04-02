@@ -14,11 +14,11 @@ const Form = ({bill, setBill, tip, setTip, people, setPeople}) => {
 
            <div className="form-tip">
                <label>Select Tip %</label><br/>
-               <button value={5}>5%</button>
-               <button value={10}>10%</button>
-               <button value={15}>15%</button>
-               <button value={25}>25%</button>
-               <button value={50}>50%</button>
+               <button value={5} onClick={(e) => setTip(e.target.value)}>5%</button>
+               <button value={10} onClick={(e) => setTip(e.target.value)}>10%</button>
+               <button value={15} onClick={(e) => setTip(e.target.value)}>15%</button>
+               <button value={25} onClick={(e) => setTip(e.target.value)}>25%</button>
+               <button value={50} onClick={(e) => setTip(e.target.value)}>50%</button>
                <input type="number" placeholder="Custom" value={tip} onChange={(e) => setTip(e.target.value)}/>
            </div>
 
