@@ -1,7 +1,6 @@
-/* form{
-    display: flex;
+*{
     justify-content: center;
-} */
+}
 div{
     margin-top: 20px;
 }
@@ -29,4 +28,28 @@ div .output-container{
 }
 h2{
     color: rgb(36, 231, 199);
+}
+
+.form{
+    background-color: white;
+    width: 55%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    border: hidden;
+    border-radius: 15px;
+}
+
+.output-container{
+    width: 75%;
+    border-radius: 10px;
+    display: flex;
+    border: hidden;
+}
+
+.output-container button{
+    height: 30px;
+    align-self: flex-end;
 }

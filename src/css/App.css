@@ -1,9 +1,13 @@
 *{
     /* background-color: rgb(157, 218, 218); */
     font-family: 'Space Mono', monospace;
+    font-size: large;
 }
 header{
     display: flex;
     justify-content: center;
     margin: 100px 0;
+}
+.app-container{
+    background-color: rgb(157, 218, 218);
 }
