@@ -11,9 +11,11 @@ const Form = ({bill, setBill, tip, setTip, people, setPeople, tipAmount, totalPe
        <form className="form">
            <div className="form-container">
                 <div className="form-input">
-                    <label>Bill</label><br/>
-                    <img src={DollarSign} alt="dollar-sign"/>
-                    <input type="number" placeholder="0" value={bill} onChange={(e) => setBill(e.target.value)}/>
+                    <label>Bill</label>
+                    <div className="input-signs">
+                        <img src={DollarSign} alt="dollar-sign"/>
+                        <input type="number" placeholder="0" value={bill} onChange={(e) => setBill(e.target.value)}/>
+                    </div>
                 </div>
 
                 <div className="form-tip">
@@ -27,9 +29,11 @@ const Form = ({bill, setBill, tip, setTip, people, setPeople, tipAmount, totalPe
                 </div>
 
                 <div className="form-input">
-                    <label>Number of People</label><br/>
-                    <img src={PersonIcon} alt="person-icon"/>
-                    <input type="number" placeholder="0" value={people} onChange={(e) => setPeople(e.target.value)}/>
+                    <label>Number of People</label>
+                    <div className="input-signs">
+                        <img src={PersonIcon} alt="person-icon"/>
+                        <input type="number" placeholder="0" value={people} onChange={(e) => setPeople(e.target.value)}/>
+                    </div>
                 </div>
            </div>
 

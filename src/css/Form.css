@@ -8,13 +8,18 @@ div{
 .form-tip button{
     color: white;
     background-color: rgb(6, 72, 75);
-    width: 1.8cm;
+    width: 2.5cm;
     height: .8cm;
-    margin-top: 5px;
-    margin-right: 8px;
+    margin: 8px 8px 8px 0px;
     border: hidden;
     border-radius: 3px;
 }
+.form-tip input{
+    width: 2.5cm;
+}
+.form-tip input::-webkit-input-placeholder {
+    text-align: center;
+  }
 
 div .output-container{
     background-color: rgb(3, 70, 66);
@@ -46,10 +51,39 @@ h2{
     width: 75%;
     border-radius: 10px;
     display: flex;
-    border: hidden;
+    border: none;
 }
 
 .output-container button{
     height: 30px;
     align-self: flex-end;
+}
+
+input[type=number]{
+    text-align: right;
+    border: none;
+    border-radius: 5px;
+    outline: blue;
+    background-color: rgb(237, 245, 244);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+::-webkit-input-placeholder {
+    text-align: right;
+  }
+.input-signs{
+    border-radius: 5px;
+    background-color: rgb(237, 245, 244);
+    width: 260px;
+    color: antiquewhite;
+    margin: 0;
+}
+div img{
+    margin: 8px 8px 0 8px;
+}
+input:focus{
+    border: 2px solid rgb(155, 221, 221) !important;
+    outline-color: rgb(155, 221, 221);
 }
