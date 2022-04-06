@@ -5,12 +5,14 @@ import "../css/Form.css";
 
 
 const Form = ({bill, setBill, tip, setTip, people, setPeople, tipAmount, totalPerPerson}) => {
-    //var tipAmount = ((Number(setBill) * (Number(setTip)/100)) / Number(setPeople)).toFixed(2);
+    //tipAmount = ((Number(setBill) * (Number(setTip)/100)) / Number(setPeople)).toFixed(2);
     //var totalPerPerson = ((Number(setBill) / Number(setPeople)) + Number(tipAmount)).toFixed(2);
-    const billHandler = (e) =>{
-        console.log(e.target.value);
-        setBill(e.target.value);
+    const tipHandler = (e) => {
+        e.preventDefault();
+        setTip(e.target.value)
     }
+    tipAmount = (Number(bill) * (Number(tip)/100)) / Number(people);
+    totalPerPerson = (Number(bill) / Number(people)) + Number(tipAmount);
    return(
        <form className="form">
            <div className="form-container">
@@ -24,11 +26,11 @@ const Form = ({bill, setBill, tip, setTip, people, setPeople, tipAmount, totalPe
 
                 <div className="form-tip">
                     <label>Select Tip %</label><br/>
-                    <button value={5} onClick={(e) => setTip(e.target.value)}>5%</button>
-                    <button value={10} onClick={(e) => setTip(e.target.value)}>10%</button>
-                    <button value={15} onClick={(e) => setTip(e.target.value)}>15%</button>
-                    <button value={25} onClick={(e) => setTip(e.target.value)}>25%</button>
-                    <button value={50} onClick={(e) => setTip(e.target.value)}>50%</button>
+                    <button value={5} onClick={tipHandler}>5%</button>
+                    <button value={10} onClick={tipHandler}>10%</button>
+                    <button value={15} onClick={tipHandler}>15%</button>
+                    <button value={25} onClick={tipHandler}>25%</button>
+                    <button value={50} onClick={tipHandler}>50%</button>
                     <input type="number" placeholder="Custom" value={tip} onChange={(e) => setTip(e.target.value)}/>
                 </div>
 

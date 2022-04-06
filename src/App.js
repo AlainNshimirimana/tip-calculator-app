@@ -14,7 +14,7 @@ function App(){
     <header><img src={Title}/></header>
         <div className="main-container">
             <div className="form-container">
-            <Form setBill={setBill} setTip={setTip} setPeople={setPeople} tipAmount={tipAmount} totalPerPerson={totalPerPerson}/>
+            <Form bill={bill} setBill={setBill} tip={tip} setTip={setTip} people={people} setPeople={setPeople} tipAmount={tipAmount} totalPerPerson={totalPerPerson}/>
             </div>
         </div>
     </div>
