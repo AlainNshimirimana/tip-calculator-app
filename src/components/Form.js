@@ -1,18 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import DollarSign from "./images/icon-dollar.svg";
 import PersonIcon from "./images/icon-person.svg";
 import "../css/Form.css";
 
 
-const Form = ({bill, setBill, tip, setTip, people, setPeople, tipAmount, totalPerPerson}) => {
-    //tipAmount = ((Number(setBill) * (Number(setTip)/100)) / Number(setPeople)).toFixed(2);
-    //var totalPerPerson = ((Number(setBill) / Number(setPeople)) + Number(tipAmount)).toFixed(2);
+const Form = ({bill, setBill, tip, setTip, people, setPeople, tipAmount, totalPerPerson, setTipAmount, setTotal}) => {
+    //tipAmount = (Number(bill) * (Number(tip)/100)) / Number(people);
+    //totalPerPerson = (Number(bill) / Number(people)) + Number(tipAmount);
     const tipHandler = (e) => {
         e.preventDefault();
         setTip(e.target.value)
     }
-    tipAmount = (Number(bill) * (Number(tip)/100)) / Number(people);
-    totalPerPerson = (Number(bill) / Number(people)) + Number(tipAmount);
+function newTipAmount(){
+    setTipAmount((Number(bill) * (Number(tip)/100)) / Number(people));
+}
+function newTotal(){
+    setTotal((Number(bill) / Number(people)) + Number(tipAmount));
+}
    return(
        <form className="form">
            <div className="form-container">
@@ -48,14 +52,14 @@ const Form = ({bill, setBill, tip, setTip, people, setPeople, tipAmount, totalPe
                         <div className="output-text">
                             <p>Tip Amount</p>
                             <p className="output-subtext">/ person</p>
-                            <h2>${tipAmount.toFixed(2)}</h2>
+                            <h2 onChange={newTipAmount()}>${tipAmount.toFixed(2)}</h2>
                         </div>
                     </div>
                     <div className="output">
                         <div className="output-text">
                             <p>Total</p>
                             <p className="output-subtext">/ person</p>
-                            <h2 placeholder="0.00">${totalPerPerson.toFixed(2)}</h2>
+                            <h2 onChange={newTotal()}>${totalPerPerson.toFixed(2)}</h2>
                         </div>
                     </div>
 
