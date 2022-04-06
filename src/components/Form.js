@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import DollarSign from "./images/icon-dollar.svg";
 import PersonIcon from "./images/icon-person.svg";
 import "../css/Form.css";
 
 
 const Form = ({bill, setBill, tip, setTip, people, setPeople, tipAmount, totalPerPerson}) => {
-    var tipAmount = ((Number(setBill) * (Number(setTip)/100)) / Number(setPeople)).toFixed(2);
-    var totalPerPerson = ((Number(setBill) / Number(setPeople)) + Number(tipAmount)).toFixed(2);
+    //var tipAmount = ((Number(setBill) * (Number(setTip)/100)) / Number(setPeople)).toFixed(2);
+    //var totalPerPerson = ((Number(setBill) / Number(setPeople)) + Number(tipAmount)).toFixed(2);
+    const billHandler = (e) =>{
+        console.log(e.target.value);
+        setBill(e.target.value);
+    }
    return(
        <form className="form">
            <div className="form-container">
@@ -42,14 +46,14 @@ const Form = ({bill, setBill, tip, setTip, people, setPeople, tipAmount, totalPe
                         <div className="output-text">
                             <p>Tip Amount</p>
                             <p className="output-subtext">/ person</p>
-                            <h2>${tipAmount}</h2>
+                            <h2>${tipAmount.toFixed(2)}</h2>
                         </div>
                     </div>
                     <div className="output">
                         <div className="output-text">
                             <p>Total</p>
                             <p className="output-subtext">/ person</p>
-                            <h2 placeholder="0.00">${bill !== "" && people !== "" && people !== "0" ? totalPerPerson  : "0.00"}</h2>
+                            <h2 placeholder="0.00">${totalPerPerson.toFixed(2)}</h2>
                         </div>
                     </div>
 
