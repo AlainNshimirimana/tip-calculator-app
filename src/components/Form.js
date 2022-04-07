@@ -10,8 +10,6 @@ function Form({ setTipAmount, setTotal, tipAmount, totalPerPerson }) {
   const [tip, setTip] = useState(0);
   const [people, setPeople] = useState(null);
 
-  console.log('im rendering');
-
   const tipHandler = (e) => {
     e.preventDefault();
     setTip(e.target.value);
