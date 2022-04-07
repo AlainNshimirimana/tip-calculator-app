@@ -5,7 +5,7 @@ import "../css/Form.css";
 
 
 const Form = ({bill, setBill, tip, setTip, people, setPeople, tipAmount, totalPerPerson, setTipAmount, setTotal}) => {
-    //tipAmount = (Number(bill) * (Number(tip)/100)) / Number(people);
+    // tipAmount = (Number(bill) * (Number(tip)/100)) / Number(people);
     //totalPerPerson = (Number(bill) / Number(people)) + Number(tipAmount);
     const tipHandler = (e) => {
         e.preventDefault();

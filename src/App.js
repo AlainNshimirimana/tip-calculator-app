@@ -5,9 +5,9 @@ import "./css/App.css";
 import "./css/Form.css";
 
 function App(){
-    const [bill, setBill] = useState(0);
-    const [tip, setTip] = useState(0);
-    const [people, setPeople] = useState(0);
+    const [bill, setBill] = useState(null);
+    const [tip, setTip] = useState(null);
+    const [people, setPeople] = useState(1);
     const [tipAmount, setTipAmount] = useState(0);
     const [totalPerPerson, setTotal] = useState(0);
     return <div className="app-container">
