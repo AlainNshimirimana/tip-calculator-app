@@ -5,17 +5,17 @@ import "./css/App.css";
 import "./css/Form.css";
 
 function App(){
-    const [bill, setBill] = useState(null);
-    const [tip, setTip] = useState(null);
-    const [people, setPeople] = useState(1);
     const [tipAmount, setTipAmount] = useState(0);
     const [totalPerPerson, setTotal] = useState(0);
     return <div className="app-container">
     <header><img src={Title} alt="App Logo"/></header>
         <div className="main-container">
             <div className="form-container">
-            <Form bill={bill} setBill={setBill} tip={tip} setTip={setTip} people={people} setPeople={setPeople}
-             tipAmount={tipAmount} totalPerPerson={totalPerPerson} setTipAmount={setTipAmount} setTotal={setTotal}/>
+            <Form 
+             tipAmount={tipAmount} 
+             totalPerPerson={totalPerPerson} 
+             setTipAmount={setTipAmount} 
+             setTotal={setTotal}/>
             </div>
         </div>
     </div>
