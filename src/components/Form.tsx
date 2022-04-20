@@ -3,14 +3,16 @@ import '../css/Form.css';
 import DollarSign from './images/icon-dollar.svg';
 import PersonIcon from './images/icon-person.svg';
 
-function Form({ setTipAmount, setTotal, tipAmount, totalPerPerson }) {
+function Form({ setTipAmount, setTotal, tipAmount, totalPerPerson } : 
+  {setTipAmount:any, setTotal:any, tipAmount:any, totalPerPerson:any}) {
   // tipAmount = (Number(bill) * (Number(tip)/100)) / Number(people);
   // totalPerPerson = (Number(bill) / Number(people)) + Number(tipAmount);
-  const [bill, setBill] = useState(null);
+  const [bill, setBill] = useState("0");
   const [tip, setTip] = useState(0);
   const [people, setPeople] = useState(null);
+  // set type to number
 
-  const tipHandler = (e) => {
+  const tipHandler = (e:any) => {
     e.preventDefault();
     setTip(e.target.value);
   };
@@ -66,7 +68,7 @@ function Form({ setTipAmount, setTotal, tipAmount, totalPerPerson }) {
             50%
           </button>
           <input
-            onChange={(e) => setTip(e.target.value)}
+            onChange={(e) => setTip(+e.target.value)}
             placeholder="Custom"
             type="number"
             value={tip}
