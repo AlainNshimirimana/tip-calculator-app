@@ -3,14 +3,20 @@ import '../css/Form.css';
 import DollarSign from './images/icon-dollar.svg';
 import PersonIcon from './images/icon-person.svg';
 
-function Form({ setTipAmount, setTotal, tipAmount, totalPerPerson }) {
-  // tipAmount = (Number(bill) * (Number(tip)/100)) / Number(people);
-  // totalPerPerson = (Number(bill) / Number(people)) + Number(tipAmount);
-  const [bill, setBill] = useState(null);
-  const [tip, setTip] = useState(0);
-  const [people, setPeople] = useState(null);
+interface FormProps{
+  tipAmount: number;
+  setTipAmount: any;
+  totalPerPerson: number;
+  setTotal: any;
 
-  const tipHandler = (e) => {
+}
+function Form({ setTipAmount, setTotal, tipAmount, totalPerPerson } : FormProps) {
+  const [bill, setBill] = useState("0");
+  const [tip, setTip] = useState(0);
+  const [people, setPeople] = useState("0");
+  // set type to number
+
+  const tipHandler = (e:any) => {
     e.preventDefault();
     setTip(e.target.value);
   };
@@ -50,23 +56,23 @@ function Form({ setTipAmount, setTotal, tipAmount, totalPerPerson }) {
         <div className="form-tip">
           <label>Select Tip %</label>
           <br />
-          <button onClick={tipHandler} value={5}>
+          <button onClick={tipHandler} value={5} id="btn">
             5%
           </button>
-          <button onClick={tipHandler} value={10}>
+          <button onClick={tipHandler} value={10} id="btn">
             10%
           </button>
-          <button onClick={tipHandler} value={15}>
+          <button onClick={tipHandler} value={15} id="btn">
             15%
           </button>
-          <button onClick={tipHandler} value={25}>
+          <button onClick={tipHandler} value={25} id="btn">
             25%
           </button>
-          <button onClick={tipHandler} value={50}>
+          <button onClick={tipHandler} value={50} id="btn">
             50%
           </button>
           <input
-            onChange={(e) => setTip(e.target.value)}
+            onChange={(e) => setTip(+e.target.value)}
             placeholder="Custom"
             type="number"
             value={tip}

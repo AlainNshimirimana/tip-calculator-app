@@ -2,5 +2,11 @@
     "editor.fontSize": 15,
     "terminal.integrated.fontFamily": "'MesloLGM Nerd Font'",
     "terminal.integrated.fontSize": 13,
-    "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace"
+    "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+    "editor.defaultFormatter": "<another formatter>",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+  }
+    
 }
