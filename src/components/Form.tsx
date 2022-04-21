@@ -4,15 +4,13 @@ import DollarSign from './images/icon-dollar.svg';
 import PersonIcon from './images/icon-person.svg';
 
 interface FormProps{
-  tipAmount: Number;
+  tipAmount: number;
   setTipAmount: any;
-  totalPerPerson: Number;
+  totalPerPerson: number;
   setTotal: any;
 
 }
 function Form({ setTipAmount, setTotal, tipAmount, totalPerPerson } : FormProps) {
-  // tipAmount = (Number(bill) * (Number(tip)/100)) / Number(people);
-  // totalPerPerson = (Number(bill) / Number(people)) + Number(tipAmount);
   const [bill, setBill] = useState("0");
   const [tip, setTip] = useState(0);
   const [people, setPeople] = useState("0");
